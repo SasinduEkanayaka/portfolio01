@@ -9,13 +9,13 @@ const Social = () => {
  
   return (
     <div className="home__social" >
-        <a href="https://www.linkedin.com/" className="home__social-icon" target="_blank" style={{ color: darkMode ? "white" : "" }}>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className="home__social-icon"  style={{ color: darkMode ? "white" : "" }}>
             <i class="uil uil-linkedin"></i>
         </a>
-        <a href="https://github.com/" className="home__social-icon" target="_blank" style={{ color: darkMode ? "white" : "" }}>
+        <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="home__social-icon"  style={{ color: darkMode ? "white" : "" }}>
             <i class="uil uil-github"></i>
         </a>
-        <a href="" className="home__social-icon" target="_blank" style={{ color: darkMode ? "white" : "" }}>
+        <a href="" className="home__social-icon" target="_blank" rel="noopener noreferrer" style={{ color: darkMode ? "white" : "" }}>
             <i class="uil uil-twitter"></i>
         </a>
     </div>

@@ -1,10 +1,14 @@
-import React, { useRef } from 'react';
+import React, { useRef,useContext  } from 'react';
 import emailjs from '@emailjs/browser';
 import "./contact.css"
+import { themeContext } from "../Context";
+
 
 function Contact() {
     const form = useRef();
-
+    const theme = useContext(themeContext);
+    const darkMode = theme.state.darkMode;
+  
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -13,6 +17,7 @@ function Contact() {
   };
   return (
     <contact className="contact section" id="contact">
+        <div className={darkMode ? "dark-mode" : ""}>
         <h2 className="section__title">Get In Touch</h2>
         <span className="section__subtitle">Contact Me</span>
 
@@ -26,7 +31,7 @@ function Contact() {
                         <i className="bx bx-mail-send  contact__card-icon"></i>
 
                         <h3 className="contact__card-title">Email</h3>
-                        <span className="contact__card-data">sasinduekanayaka43@gmail.com</span>
+                        <span className="contact__card-data" style={{ color: darkMode ? "black" : "black"}}>sasinduekanayaka43@gmail.com</span>
 
                         <a href="mailto:weerakkodyse@gmail.com" className="contact__button">Write Me
                         <i className="bx bx-right-arrow-alt contact__button-icon"></i></a>
@@ -36,7 +41,7 @@ function Contact() {
                         <i className="bx bx-mail-send contact__card-icon"></i>
 
                         <h3 className="contact__card-title">Whatsapp</h3>
-                        <span className="contact__card-data">0761550068</span>
+                        <span className="contact__card-data"style={{ color: darkMode ? "black" : "black"}}>0761550068</span>
 
                         <a href="https://api.whatsapp.com/send?phone=0706888992&text=Hello, more information!" className="contact__button" target="blank">Message
                         <i className="bx bx-right-arrow-alt contact__button-icon"></i></a>
@@ -46,7 +51,7 @@ function Contact() {
                         <i className="bx bx-mail-send contact__card-icon"></i>
 
                         <h3 className="contact__card-title">linkdin</h3>
-                        <span className="contact__card-data">Sasindu Ekanayaka</span>
+                        <span className="contact__card-data"style={{ color: darkMode ? "black" : "black"}}>Sasindu Ekanayaka</span>
 
                         <a href="https://www.linkedin.com/in/sahanerandikaweerakkody" className="contact__button" target="blank">Connect
                         <i className="bx bx-right-arrow-alt contact__button-icon"></i></a>
@@ -59,17 +64,17 @@ function Contact() {
 
                 <form ref={form} onSubmit={sendEmail} className="contact__form">
                     <div className="contact__form-div">
-                        <label className="contact__form-tag">Name</label>
-                        <input type="text" name="name" className="contact__form-input" placeholder="write your name" />
+                        <label className="contact__form-tag"style={{ color: darkMode ? "white" : "black", backgroundColor: darkMode ? "black": "white"}}>Name</label>
+                        <input type="text" name="name" className="contact__form-input" placeholder="write your name"/>
                     </div>
 
                     <div className="contact__form-div">
-                        <label className="contact__form-tag">Mail</label>
+                        <label className="contact__form-tag"style={{ color: darkMode ? "white" : "black", backgroundColor: darkMode ? "black": "white"}}>Mail</label>
                         <input type="email" name="email" className="contact__form-input" placeholder="write your email" />
                     </div>
 
                     <div className="contact__form-div contact__form-area">
-                        <label className="contact__form-tag">Project</label>
+                        <label className="contact__form-tag"style={{ color: darkMode ? "white" : "black", backgroundColor: darkMode ? "black": "white"}}>Project</label>
                         <textarea name="project" cols="30" rows="10" className="contact__form-input" placeholder="write your message"></textarea>
                     </div>
 
@@ -94,7 +99,7 @@ function Contact() {
                     </button>
                 </form>
             </div>
-
+</div>
         </div>
     </contact>
   )
