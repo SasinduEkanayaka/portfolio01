@@ -40,7 +40,7 @@ function About() {
 
       <div className="about__container container grid">
         <motion.img
-          
+          src={AboutImg} alt="Team working together on a project"
           className="about__img"
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
