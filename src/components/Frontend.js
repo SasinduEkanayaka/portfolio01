@@ -68,7 +68,7 @@ function Frontend() {
                 <div className="skills__data">
                     <i className="bx bx-badge-check"></i>
                     <div>
-                        <h3 className="skills__name">jQuery</h3>
+                        <h3 className="skills__name">Wordpress</h3>
                         <div className="skills__level">
                             <div className="skill__meater" style={{width:"60px"}}></div>
                         </div>
