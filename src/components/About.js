@@ -1,6 +1,6 @@
 import React from 'react';
 import AboutImg from "../assets/abouts.png";
-import CV from "../assets/John-Cv.pdf";
+import CV from "../assets/cv.pdf";
 import Info from "./Info";
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';

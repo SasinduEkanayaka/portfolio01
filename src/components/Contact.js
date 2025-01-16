@@ -33,7 +33,7 @@ function Contact() {
                         <h3 className="contact__card-title">Email</h3>
                         <span className="contact__card-data" style={{ color: darkMode ? "black" : "black"}}>sasinduekanayaka43@gmail.com</span>
 
-                        <a href="mailto:weerakkodyse@gmail.com" className="contact__button">Write Me
+                        <a href="mailto:sasinduekanayaka43@gmail.com" className="contact__button">Write Me
                         <i className="bx bx-right-arrow-alt contact__button-icon"></i></a>
                     </div>
                     
@@ -43,7 +43,7 @@ function Contact() {
                         <h3 className="contact__card-title">Whatsapp</h3>
                         <span className="contact__card-data"style={{ color: darkMode ? "black" : "black"}}>0761550068</span>
 
-                        <a href="https://api.whatsapp.com/send?phone=0706888992&text=Hello, more information!" className="contact__button" target="blank">Message
+                        <a href="https://api.whatsapp.com/send?phone=0761550068&text=Hello, more information!" className="contact__button" target="blank">Message
                         <i className="bx bx-right-arrow-alt contact__button-icon"></i></a>
                     </div>
                     
@@ -53,7 +53,7 @@ function Contact() {
                         <h3 className="contact__card-title">linkdin</h3>
                         <span className="contact__card-data"style={{ color: darkMode ? "black" : "black"}}>Sasindu Ekanayaka</span>
 
-                        <a href="https://www.linkedin.com/in/sahanerandikaweerakkody" className="contact__button" target="blank">Connect
+                        <a href="https://www.linkedin.com/in/sasindu-ekanayaka/" className="contact__button" target="blank">Connect
                         <i className="bx bx-right-arrow-alt contact__button-icon"></i></a>
                     </div>
                  </div>
