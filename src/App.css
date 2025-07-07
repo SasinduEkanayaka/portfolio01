@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
 
 :root {
   --header-height: 3rem;
@@ -10,6 +10,28 @@
   --text-color: hsl(var(--hue), var(--sat), 46%);
   --body-color: hsl(var(--hue), var(--sat), 98%);
   --container-color: #fff;
+
+  /* Modern gradient colors */
+  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --accent-color: #667eea;
+  --accent-color-light: rgba(102, 126, 234, 0.1);
+  
+  /* Glass morphism variables */
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --glass-blur: blur(20px);
+  
+  /* Dark theme variables */
+  --dark-bg: #121212;
+  --dark-surface: #1e1e1e;
+  --dark-text: #ffffff;
+  --dark-text-secondary: rgba(255, 255, 255, 0.7);
+  
+  /* Animation variables */
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: all 0.2s ease;
+  --transition-slow: all 0.5s ease;
 
   --body-font: "Poppins", sans-serif;
 

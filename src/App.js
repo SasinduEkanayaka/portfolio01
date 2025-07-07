@@ -8,6 +8,7 @@ import Work from './components/Work';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Journey from './components/Journey';
+import Cursor from './components/Cursor';
 import { themeContext } from './Context';
 import { useContext } from 'react';
 function App() {
@@ -19,6 +20,7 @@ function App() {
       background : darkMode? 'black':'',
       color : darkMode? 'white': ''
     }}>
+      <Cursor />
       <Header />
       <main className='main'>
         <Home />

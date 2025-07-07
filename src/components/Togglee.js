@@ -7,19 +7,30 @@ import { themeContext } from "../Context";
 const Togglee = () => {
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
+  
   const handleClick = () => {
-    // debugger
     theme.dispatch({ type: "toggle" });
   };
+  
   return (
-    <div className="toggle" onClick={handleClick}>
+    <div 
+      className="toggle" 
+      onClick={handleClick}
+      data-theme={darkMode ? "dark" : "light"}
+      role="button"
+      tabIndex={0}
+      aria-label={`Switch to ${darkMode ? 'light' : 'dark'} mode`}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          handleClick();
+        }
+      }}
+    >
       <Moon />
       <Sun />
-      {/*                              toggle.css mein left ki property aik assign hy ussy delete
-                                          krna hy pehly */}
       <div
         className="t-button"
-        style={darkMode ? { left: "2px" } : { right: "2px" }}
+        style={darkMode ? { left: "4px" } : { right: "4px" }}
       ></div>
     </div>
   );

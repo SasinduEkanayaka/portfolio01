@@ -26,7 +26,7 @@ function Journey() {
   }, []);
 
   return (
-    <section className={`qualification section ${isVisible ? 'animate' : ''}`} ref={journeyRef}>
+    <section className={`qualification section ${isVisible ? 'animate' : ''}`} id="journey" ref={journeyRef}>
       <h2 className="section__title">My Journey</h2>
       <span className="section__subtitle">My Journey</span>
 

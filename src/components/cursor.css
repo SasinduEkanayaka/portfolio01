@@ -1,0 +1,209 @@
+/* ===== CUSTOM CURSOR STYLES ===== */
+
+/* Hide default cursor on desktop */
+@media (min-width: 768px) {
+  * {
+    cursor: none !important;
+  }
+}
+
+/* Cursor Dot - Main cursor */
+#cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(135deg, #7c3aed 0%, #a855f7 50%, #c084fc 100%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  z-index: 10000;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+  box-shadow: 
+    0 0 10px rgba(124, 58, 237, 0.5),
+    0 0 20px rgba(168, 85, 247, 0.3),
+    0 0 30px rgba(196, 131, 252, 0.2);
+  animation: cursorPulse 2s ease-in-out infinite;
+}
+
+/* Cursor Dot Outline - Trailing effect */
+#cursor-dot-outline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  border: 2px solid rgba(124, 58, 237, 0.4);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  z-index: 9999;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  background: radial-gradient(
+    circle,
+    rgba(124, 58, 237, 0.1) 0%,
+    rgba(168, 85, 247, 0.05) 50%,
+    transparent 100%
+  );
+  backdrop-filter: blur(2px);
+  animation: cursorOutlinePulse 3s ease-in-out infinite;
+}
+
+/* Pulse animations */
+@keyframes cursorPulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    box-shadow: 
+      0 0 10px rgba(124, 58, 237, 0.5),
+      0 0 20px rgba(168, 85, 247, 0.3),
+      0 0 30px rgba(196, 131, 252, 0.2);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+    box-shadow: 
+      0 0 15px rgba(124, 58, 237, 0.7),
+      0 0 25px rgba(168, 85, 247, 0.4),
+      0 0 35px rgba(196, 131, 252, 0.3);
+  }
+}
+
+@keyframes cursorOutlinePulse {
+  0%, 100% {
+    border-color: rgba(124, 58, 237, 0.4);
+    background: radial-gradient(
+      circle,
+      rgba(124, 58, 237, 0.1) 0%,
+      rgba(168, 85, 247, 0.05) 50%,
+      transparent 100%
+    );
+  }
+  50% {
+    border-color: rgba(168, 85, 247, 0.6);
+    background: radial-gradient(
+      circle,
+      rgba(124, 58, 237, 0.15) 0%,
+      rgba(168, 85, 247, 0.08) 50%,
+      transparent 100%
+    );
+  }
+}
+
+/* Enhanced hover states - Applied via JavaScript */
+.cursor-hover #cursor-dot {
+  background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 50%, #c4b5fd 100%);
+  box-shadow: 
+    0 0 15px rgba(139, 92, 246, 0.7),
+    0 0 25px rgba(167, 139, 250, 0.5),
+    0 0 35px rgba(196, 181, 253, 0.3);
+}
+
+/* Enhanced hover effect for special elements */
+.cursor-special #cursor-dot {
+  background: linear-gradient(135deg, #ec4899 0%, #f472b6 50%, #f9a8d4 100%);
+  box-shadow: 
+    0 0 20px rgba(236, 72, 153, 0.8),
+    0 0 30px rgba(244, 114, 182, 0.6),
+    0 0 40px rgba(249, 168, 212, 0.4);
+}
+
+/* Text selection cursor */
+.cursor-text #cursor-dot {
+  width: 2px;
+  height: 20px;
+  border-radius: 2px;
+  background: linear-gradient(180deg, #7c3aed 0%, #a855f7 100%);
+}
+
+/* Click/Active state */
+#cursor-dot:active {
+  transform: translate(-50%, -50%) scale(0.8);
+}
+
+#cursor-dot-outline:active {
+  transform: translate(-50%, -50%) scale(6);
+  opacity: 0.2;
+}
+
+/* Special effects for different sections */
+.home:hover ~ #cursor-dot {
+  box-shadow: 
+    0 0 15px rgba(59, 130, 246, 0.7),
+    0 0 25px rgba(99, 102, 241, 0.5),
+    0 0 35px rgba(129, 140, 248, 0.3);
+}
+
+.about:hover ~ #cursor-dot {
+  box-shadow: 
+    0 0 15px rgba(251, 146, 60, 0.7),
+    0 0 25px rgba(34, 197, 94, 0.5),
+    0 0 35px rgba(16, 185, 129, 0.3);
+}
+
+.skills:hover ~ #cursor-dot {
+  box-shadow: 
+    0 0 15px rgba(6, 182, 212, 0.7),
+    0 0 25px rgba(168, 85, 247, 0.5),
+    0 0 35px rgba(14, 165, 233, 0.3);
+}
+
+.services:hover ~ #cursor-dot {
+  box-shadow: 
+    0 0 15px rgba(99, 102, 241, 0.7),
+    0 0 25px rgba(59, 130, 246, 0.5),
+    0 0 35px rgba(79, 70, 229, 0.3);
+}
+
+.contact:hover ~ #cursor-dot {
+  box-shadow: 
+    0 0 15px rgba(236, 72, 153, 0.7),
+    0 0 25px rgba(168, 85, 247, 0.5),
+    0 0 35px rgba(219, 39, 119, 0.3);
+}
+
+/* Responsive - Hide custom cursor on mobile */
+@media (max-width: 767px) {
+  #cursor-dot,
+  #cursor-dot-outline {
+    display: none !important;
+  }
+  
+  * {
+    cursor: auto !important;
+  }
+}
+
+/* Loading state */
+@keyframes cursorLoading {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(180deg) scale(1.2);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg) scale(1);
+  }
+}
+
+/* Add loading class when needed */
+.cursor-loading #cursor-dot {
+  animation: cursorLoading 1s linear infinite;
+}
+
+.cursor-loading #cursor-dot-outline {
+  animation: cursorLoading 1s linear infinite reverse;
+}
+
+/* Smooth transitions for all cursor states */
+#cursor-dot,
+#cursor-dot-outline {
+  transition: 
+    opacity 0.3s cubic-bezier(0.23, 1, 0.32, 1),
+    transform 0.3s cubic-bezier(0.23, 1, 0.32, 1),
+    background 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}

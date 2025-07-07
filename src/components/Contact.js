@@ -13,7 +13,12 @@ function Contact() {
     e.preventDefault();
 
     emailjs.sendForm('service_twlmvof', 'template_fctuyzi', form.current, 'pfQ5P5GffBW21Mi3D')
-      e.target.rest()
+      .then((result) => {
+          console.log(result.text);
+          e.target.reset();
+      }, (error) => {
+          console.log(error.text);
+      });
   };
   return (
     <contact className="contact section" id="contact">
@@ -25,10 +30,9 @@ function Contact() {
             
 
             <div className="contact__content">
-                <h3 className="contact__title">Talk To Me</h3>
                  <div className="contact__info">
-                    <div className="contact__card">
-                        <i className="bx bx-mail-send  contact__card-icon"></i>
+                    <div className="contact__card contact__card--animated">
+                        <i className="bx bx-envelope contact__card-icon contact__card-icon--email"></i>
 
                         <h3 className="contact__card-title">Email</h3>
                         <span className="contact__card-data" style={{ color: darkMode ? "black" : "black"}}>sasinduekanayaka43@gmail.com</span>
@@ -37,20 +41,20 @@ function Contact() {
                         <i className="bx bx-right-arrow-alt contact__button-icon"></i></a>
                     </div>
                     
-                    <div className="contact__card">
-                        <i className="bx bx-mail-send contact__card-icon"></i>
+                    <div className="contact__card contact__card--animated">
+                        <i className="bx bxl-whatsapp contact__card-icon contact__card-icon--whatsapp"></i>
 
-                        <h3 className="contact__card-title">Whatsapp</h3>
+                        <h3 className="contact__card-title">WhatsApp</h3>
                         <span className="contact__card-data"style={{ color: darkMode ? "black" : "black"}}>0761550068</span>
 
                         <a href="https://api.whatsapp.com/send?phone=0761550068&text=Hello, more information!" className="contact__button" target="blank">Message
                         <i className="bx bx-right-arrow-alt contact__button-icon"></i></a>
                     </div>
                     
-                    <div className="contact__card">
-                        <i className="bx bx-mail-send contact__card-icon"></i>
+                    <div className="contact__card contact__card--animated">
+                        <i className="bx bxl-linkedin contact__card-icon contact__card-icon--linkedin"></i>
 
-                        <h3 className="contact__card-title">linkdin</h3>
+                        <h3 className="contact__card-title">LinkedIn</h3>
                         <span className="contact__card-data"style={{ color: darkMode ? "black" : "black"}}>Sasindu Ekanayaka</span>
 
                         <a href="https://www.linkedin.com/in/sasindu-ekanayaka/" className="contact__button" target="blank">Connect
@@ -60,8 +64,6 @@ function Contact() {
             </div>
 
             <div className="contact__content">
-                <h3 className="contact__title">Write Me Your Projects</h3>
-
                 <form ref={form} onSubmit={sendEmail} className="contact__form">
                     <div className="contact__form-div">
                         <label className="contact__form-tag"style={{ color: darkMode ? "white" : "black", backgroundColor: darkMode ? "black": "white"}}>Name</label>
