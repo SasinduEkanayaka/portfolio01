@@ -209,7 +209,7 @@ function Works() {
         image: fourteen,
         title: "medi center Application",
         description: "A user-friendly medical app design for booking appointments and accessing healthcare services.",
-        link: "https://www.figma.com/proto/ZZ6zJquHEC7nDqHFqVb4yK/MobileApp?node-id=65-1799&t=8IDbwLLOEC1ohtgR-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=65%3A1782",
+        link: "https://www.figma.com/design/wKEQryh5BVOmwOEfSPp4tn/Untitled?node-id=0-1&p=f&t=KrXJNn9RuhMP9o1l-0",
         alt: "medi center Application",
         category: "figmaMobile"
       },
@@ -522,7 +522,6 @@ function Works() {
         speed={1200}
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
-          // Start autoplay immediately when swiper is ready
           setTimeout(() => {
             if (swiper.autoplay && projects.length > 1) {
               swiper.autoplay.start();
