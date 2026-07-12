@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://SasinduEkanayaka.github.io/portfolio01",
+  "homepage": ".",
   "dependencies": {
     "@emailjs/browser": "^3.12.1",
     "@iconscout/react-unicons": "^2.0.2",
