@@ -141,7 +141,6 @@ function Works() {
   const [progress, setProgress] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const [activeCategory, setActiveCategory] = useState('all');
-  const [isTransitioning, setIsTransitioning] = useState(false);
   const swiperRef = useRef(null);
   const portfolioRef = useRef(null);
 
@@ -368,11 +367,8 @@ function Works() {
   const handleCategoryChange = (category) => {
     if (category === activeCategory) return;
     
-    setIsTransitioning(true);
-    
     setTimeout(() => {
       setActiveCategory(category);
-      setIsTransitioning(false);
     }, 150);
   };
 

@@ -85,10 +85,10 @@ function Header() {
 
                 <div className="nav__actions">
                     <div className="nav__social">
-                        <a href="#" className="nav__social-link" aria-label="GitHub">
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="nav__social-link" aria-label="GitHub">
                             <i className="uil uil-github"></i>
                         </a>
-                        <a href="#" className="nav__social-link" aria-label="LinkedIn">
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="nav__social-link" aria-label="LinkedIn">
                             <i className="uil uil-linkedin"></i>
                         </a>
                     </div>
