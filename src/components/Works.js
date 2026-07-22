@@ -1,27 +1,19 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 import "swiper/css";
 import "swiper/css/navigation";
-import { ArrowUpRight, Play, Pause, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowUpRight, ChevronLeft, ChevronRight } from 'lucide-react';
 
 import three from "../assets/3.png";
 import four from "../assets/4.png";
 import five from "../assets/5.png";
-import six from "../assets/6.png";
-import seven from "../assets/7.png";
 import eight from "../assets/8.png";
 import nine from "../assets/9.png";
-import ten from "../assets/10.png";
 import eleven from "../assets/11.png";
 import twelve from "../assets/12.png";
-import thirteen from "../assets/13.png";
-import fourteen from "../assets/14.png";
 import fifteen from "../assets/15.png";
-import sixteen from "../assets/16.png";
-import seventeen from "../assets/17.png";
 import eighteen from "../assets/18.png";
-import twenty from "../assets/20.png";
 import "./portfolio.css"
 
 const ProjectCard = ({ image, title, description, link, alt, category }) => {
@@ -136,9 +128,7 @@ const ProjectCard = ({ image, title, description, link, alt, category }) => {
 };
 
 function Works() {
-  const [isAutoPlaying, setIsAutoPlaying] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [progress, setProgress] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const [activeCategory, setActiveCategory] = useState('all');
   const swiperRef = useRef(null);
@@ -171,14 +161,6 @@ function Works() {
         category: "figmaWeb"
       },
       {
-        image: ten,
-        title: "Service Center",
-        description: "A modern Figma layout for a service center website with booking and service tracking features.",
-        link: "https://www.figma.com/proto/vBjaqDvySYS1gSQYjdk6oW/service-project?node-id=1-642&p=f&t=UrZgz2TGY58rpIH3-1&scaling=contain&content-scaling=fixed&page-id=0%3A1",
-        alt: "Service Center",
-        category: "figmaWeb"
-      },
-      {
         image: eleven,
         title: "Ai Portfolio",
         description: "A modern AI-themed portfolio UI designed in Figma with a sleek, user-friendly layout.",
@@ -194,32 +176,8 @@ function Works() {
         alt: "pos dashboard",
         category: "figmaWeb"
       },
-      {
-        image: thirteen,
-        title: "Health Dashboard",
-        description: "A modern health dashboard UI for tracking wellness, fitness, and medical stats.",
-        link: "https://www.figma.com/proto/6X9QA8fYUbfc4SBUTrAGk1/Healthcare?node-id=2-9582&p=f&t=eiDrEBUVSKUstnFP-1&scaling=contain&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A9582",
-        alt: "Health Dashboard",
-        category: "figmaWeb"
-      }
     ],
     figmaMobile: [
-      {
-        image: fourteen,
-        title: "medi center Application",
-        description: "A user-friendly medical app design for booking appointments and accessing healthcare services.",
-        link: "https://www.figma.com/design/wKEQryh5BVOmwOEfSPp4tn/Untitled?node-id=0-1&p=f&t=KrXJNn9RuhMP9o1l-0",
-        alt: "medi center Application",
-        category: "figmaMobile"
-      },
-      {
-        image: sixteen,
-        title: "Beach clean Application",
-        description: "An eco-friendly app design to organize and promote beach cleaning events.",
-        link: "https://www.figma.com/proto/zch9coybqR1IJnhTmsp3hl/MAD?node-id=1-2539&starting-point-node-id=1%3A2539&t=CZq320zyK4DfSgMy-1",
-        alt: "beach clean Application",
-        category: "figmaMobile"
-      },
       {
         image: eighteen,
         title: "Food Order Application",
@@ -227,30 +185,14 @@ function Works() {
         link: "https://www.figma.com/proto/giN4n9PsScAIL3C3UoCAtr/IT22562760?node-id=1-221&p=f&t=qNeYi9xjXaDewISI-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A221",
         alt: "Food Order Application",
         category: "figmaMobile"
-      },
-      {
-        image: twenty,
-        title: "Hutch Cliq Application",
-        description: "Modern and sleek app redesign focused on improved usability and fresh visuals.",
-        link: "https://www.figma.com/proto/P6u3RiJ2Pp1Nxr5BYU7WCD/Hutch?node-id=3-7488&starting-point-node-id=3%3A7488&t=bBGGy3xiYI9EXIw7-1",
-        alt: "Hutch Cliq Application",
-        category: "figmaMobile"
       }
     ],
     fullstack: [
-        {
-        image: six,
-        title: " TourCraft",
-        description: "A dynamic tourism website built with the MERN stack to Sri Lanka’s travel options.",
-        link: "https://github.com/malakasadeep/ITP24_B9_09_Tourism_Management_System-MERN.git",
-        alt: "tourism website",
-        category: "fullstack"
-      },
          {
         image: nine,
         title: "Yewon Lanka",
         description: "A clean, responsive tourism website for showcasing tours and services across Sri Lanka.",
-        link: "https://yalayewontours.lk/",
+        link: "https://yalayewontours.com/",
         alt: "tourism website",
         category: "fullstack"
       },
@@ -264,26 +206,10 @@ function Works() {
       }
     ],
     frontend: [
-       {
-        image: seven,
-        title: " E-Commerce Website",
-        description: "A stylish e-commerce site built with React for smooth and responsive shopping.",
-        link: "https://fashion-nexus.vercel.app/",
-        alt: "Service Center",
-        category: "frontend"
-      },
         {
         image: fifteen,
         title: " Tourism Website",
         description: "A clean, responsive tourism website built with WordPress to showcase Sri Lanka tours.",
-        link: "",
-        alt: "Service Center",
-        category: "frontend"
-      },
-        {
-        image: seventeen,
-        title: "Fitnees website",
-        description: "A responsive fitness website built with WordPress for gym promotions and bookings.",
         link: "",
         alt: "Service Center",
         category: "frontend"
@@ -328,38 +254,11 @@ function Works() {
     return () => observer.disconnect();
   }, []);
 
-  // Start autoplay when component mounts
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      if (swiperRef.current && swiperRef.current.autoplay && projects.length > 1) {
-        swiperRef.current.autoplay.start();
-        setIsAutoPlaying(true);
-      }
-    }, 500); // Start autoplay after component loads
-
-    return () => clearTimeout(timer);
-  }, [projects.length]);
-
-  // Track autoplay status
-  useEffect(() => {
-    if (!swiperRef.current) return;
-
-    const interval = setInterval(() => {
-      if (swiperRef.current && swiperRef.current.autoplay) {
-        const isRunning = swiperRef.current.autoplay.running;
-        setIsAutoPlaying(isRunning);
-      }
-    }, 100);
-
-    return () => clearInterval(interval);
-  }, []);
-
   // Handle category changes and slider updates
   useEffect(() => {
     if (swiperRef.current) {
       swiperRef.current.slideTo(0);
       setCurrentSlide(0);
-      setProgress(0);
     }
   }, [activeCategory]);
 
@@ -372,33 +271,10 @@ function Works() {
     }, 150);
   };
 
-  const toggleAutoPlay = () => {
-    if (!swiperRef.current) return;
-    
-    if (isAutoPlaying) {
-      swiperRef.current.autoplay?.stop();
-      setIsAutoPlaying(false);
-    } else {
-      swiperRef.current.autoplay?.start();
-      setIsAutoPlaying(true);
-    }
-  };
-
-  const forceRestartAutoplay = () => {
-    if (swiperRef.current && swiperRef.current.autoplay) {
-      swiperRef.current.autoplay.stop();
-      setTimeout(() => {
-        swiperRef.current.autoplay.start();
-        setIsAutoPlaying(true);
-      }, 100);
-    }
-  };
-
   const goToSlide = (index) => {
     if (swiperRef.current) {
       swiperRef.current.slideToLoop(index);
       setCurrentSlide(index);
-      setProgress(0);
     }
   };
 
@@ -502,35 +378,19 @@ function Works() {
       </div>
 
       <Swiper
-        modules={[Autoplay, Navigation]}
+        modules={[Navigation]}
         spaceBetween={60}
         slidesPerView={3}
         centeredSlides={true}
         grabCursor={true}
         loop={projects.length > 2}
         loopedSlides={projects.length}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-          pauseOnMouseEnter: false,
-          waitForTransition: true
-        }}
-        speed={1200}
+        speed={600}
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
-          setTimeout(() => {
-            if (swiper.autoplay && projects.length > 1) {
-              swiper.autoplay.start();
-              setIsAutoPlaying(true);
-            }
-          }, 100);
         }}
         onSlideChange={(swiper) => {
           setCurrentSlide(swiper.realIndex);
-          setProgress(0);
-        }}
-        onAutoplayTimeLeft={(swiper, time, progress) => {
-          setProgress((1 - progress) * 100);
         }}
         className="portfolio-slider"
         breakpoints={{
@@ -568,87 +428,35 @@ function Works() {
         )}
       </Swiper>
 
-      {/* Controls */}
-      <div className={`auto-scroll-controls ${isVisible ? 'controls-animate-in' : ''}`}>
-        {/* Scroll Status */}
-        <div className="scroll-status">
-          <div className={`status-indicator-dot ${isAutoPlaying ? 'active' : ''}`}></div>
-          <span className="status-text">
-            {isAutoPlaying ? 'Auto-scrolling' : 'Paused'}
-          </span>
-          {/* Debug info */}
-          <small style={{ marginLeft: '0.5rem', color: '#9ca3af', fontSize: '0.7rem' }}>
-            ({projects.length} slides)
-          </small>
-        </div>
-
-        {/* Auto-play Toggle */}
-        <button 
-          className={`auto-scroll-toggle ${isAutoPlaying ? 'active' : ''}`}
-          onClick={toggleAutoPlay}
-          aria-label={isAutoPlaying ? 'Pause auto-scroll' : 'Start auto-scroll'}
+      {/* Navigation */}
+      <div className={`portfolio-nav-bar ${isVisible ? 'controls-animate-in' : ''}`}>
+        <button
+          className="nav-arrow"
+          onClick={goPrev}
+          aria-label="Previous project"
         >
-          {isAutoPlaying ? (
-            <Pause className="play-pause-icon" />
-          ) : (
-            <Play className="play-pause-icon" />
-          )}
-          <span>{isAutoPlaying ? 'Pause' : 'Play'}</span>
+          <ChevronLeft />
         </button>
 
-        {/* Restart Button for debugging */}
-        <button 
-          className="restart-btn"
-          onClick={forceRestartAutoplay}
-          title="Force restart autoplay"
-        >
-          🔄
-        </button>
-
-        {/* Progress Dots */}
         <div className="progress-dots">
           {projects.map((_, index) => (
             <button
               key={index}
               className={`progress-dot ${currentSlide === index ? 'active' : ''}`}
               onClick={() => goToSlide(index)}
-              aria-label={`Go to slide ${index + 1}`}
+              aria-label={`Go to project ${index + 1}`}
               title={`Project ${index + 1} of ${projects.length}`}
             />
           ))}
-          <span className="slide-counter">
-            {currentSlide + 1} / {projects.length}
-          </span>
         </div>
 
-        {/* Progress Bar */}
-        <div className="progress-bar">
-          <div 
-            className="progress-fill" 
-            style={{ 
-              width: `${progress}%`,
-              opacity: isAutoPlaying ? 1 : 0.5 
-            }}
-          />
-        </div>
-
-        {/* Navigation */}
-        <div className="portfolio-navigation">
-          <button 
-            className="nav-arrow" 
-            onClick={goPrev}
-            aria-label="Previous slide"
-          >
-            <ChevronLeft />
-          </button>
-          <button 
-            className="nav-arrow" 
-            onClick={goNext}
-            aria-label="Next slide"
-          >
-            <ChevronRight />
-          </button>
-        </div>
+        <button
+          className="nav-arrow"
+          onClick={goNext}
+          aria-label="Next project"
+        >
+          <ChevronRight />
+        </button>
       </div>
     </div>
   );

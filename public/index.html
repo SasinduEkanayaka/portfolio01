@@ -2,51 +2,71 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favico.ico" />
+
+    <!-- Favicons -->
+    <link rel="icon" href="%PUBLIC_URL%/favico.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/apple-touch-icon.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="keywords" content="I am Sasindu Ekanayaka iam 23 years. I'm from Sri Lanka.,Sasindu Ekanayaka,Frontend_developer coding,null,null">
-    <meta name="description" content="Explore the remarkable journey of Sasindu Sulakshana Ekanayaka, 
-    a talented Frontend developer. Learn about his projects and experiences in the dynamic world of technology.">
-    <meta name="keywords" content="Sasindu Ekanayaka, UIUX | Frontend Developer, Web Development, Technology, Projects">
-    <meta name="author" content="Sasindu Ekanayaka">
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-    <meta name="og:title" content="Sasindu Ekanayaka: Frontend Developer">
-    <meta name="og:description" content="Explore the remarkable journey of Sasindu Sulakshana Ekanayaka, a talented Frontend developer. Learn about his projects and experiences in the dynamic world of technology.">
-    <meta name="og:image" content="https://iamsahan.live/static/media/profile.77569e1715d629742ab7.jpg">
-    <meta name="og:url" content="https://iamsahan.live">
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <meta name="theme-color" content="#7c3aed" />
+
+    <!-- Primary SEO -->
+    <title>Sasindu Ekanayaka | UI/UX & Frontend Developer</title>
+    <meta name="title" content="Sasindu Ekanayaka | UI/UX & Frontend Developer" />
+    <meta name="description" content="Sasindu Ekanayaka is a UI/UX and Frontend Developer from Sri Lanka, 3+ years experience building clean, modern, responsive web experiences with React, Figma, and full-stack tools. Explore his portfolio, skills, and projects." />
+    <meta name="keywords" content="Sasindu Ekanayaka, UI/UX Designer, Frontend Developer, React Developer, Figma Designer, Web Developer Sri Lanka, Portfolio, SLIIT, Software Engineering" />
+    <meta name="author" content="Sasindu Ekanayaka" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    <link rel="canonical" href="https://sasinduekanayake.me/" />
+
+    <!-- Open Graph / Facebook, LinkedIn, WhatsApp -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Sasindu Ekanayaka" />
+    <meta property="og:title" content="Sasindu Ekanayaka | UI/UX & Frontend Developer" />
+    <meta property="og:description" content="UI/UX and Frontend Developer from Sri Lanka building clean, modern, responsive web experiences. Explore my portfolio, skills, and projects." />
+    <meta property="og:url" content="https://sasinduekanayake.me/" />
+    <meta property="og:image" content="https://sasinduekanayake.me/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Sasindu Ekanayaka - UI/UX & Frontend Developer" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Sasindu Ekanayaka | UI/UX & Frontend Developer" />
+    <meta name="twitter:description" content="UI/UX and Frontend Developer from Sri Lanka building clean, modern, responsive web experiences." />
+    <meta name="twitter:image" content="https://sasinduekanayake.me/og-image.png" />
+    <meta name="twitter:image:alt" content="Sasindu Ekanayaka - UI/UX & Frontend Developer" />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Sasindu Ekanayaka",
+        "url": "https://sasinduekanayake.me/",
+        "image": "https://sasinduekanayake.me/og-image.png",
+        "jobTitle": "UI/UX & Frontend Developer",
+        "description": "UI/UX and Frontend Developer from Sri Lanka building clean, modern, responsive web experiences.",
+        "sameAs": [
+          "https://www.linkedin.com/in/sasindu-ekanayaka/"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "LK"
+        }
+      }
+    </script>
+
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>Sasindu Ekanayaka: Frontend Developer</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>

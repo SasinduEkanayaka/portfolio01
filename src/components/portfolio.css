@@ -455,21 +455,23 @@ body {
   transform: scale(1.2);
 }
 
-/* Auto-scroll Controls */
-.auto-scroll-controls {
+/* Portfolio Navigation Bar - drag/swipe carousel controls */
+.portfolio-nav-bar {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
-  margin-top: 3rem;
-  padding: 2rem 1rem;
-  flex-wrap: wrap;
-  min-height: 80px;
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  padding: 0.75rem;
+}
+
+/* Drag/swipe affordance on the carousel itself */
+.portfolio .swiper {
+  cursor: grab;
+}
+
+.portfolio .swiper:active {
+  cursor: grabbing;
 }
 
 .auto-scroll-toggle {
@@ -1323,14 +1325,14 @@ body {
   .portfolio .swiper {
     padding: 2rem 0 4rem 0;
     min-height: 500px;
+    overflow: hidden !important;
   }
-  
-  .auto-scroll-controls {
+
+  .portfolio-nav-bar {
     margin-top: 2rem;
-    padding: 1.5rem 1rem;
-    gap: 0.75rem;
+    gap: 1rem;
   }
-  
+
   .portfolio-slider .swiper-slide {
     width: 320px;
   }
@@ -1368,12 +1370,11 @@ body {
     min-height: 450px;
   }
   
-  .auto-scroll-controls {
+  .portfolio-nav-bar {
     margin-top: 1.5rem;
-    padding: 1rem;
-    gap: 0.5rem;
+    gap: 0.75rem;
   }
-  
+
   .portfolio-slider .swiper-slide {
     width: 300px;
   }

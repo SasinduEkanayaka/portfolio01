@@ -21,6 +21,11 @@
     column-gap: 1.5rem;
     margin: 0;
     padding: 0;
+    min-width: 0;
+}
+
+.qualification__data > div {
+    min-width: 0;
 }
 
 .qualification__title {
@@ -70,13 +75,21 @@
   @media screen and (max-width: 576px){
     .qualification__container {
         grid-template-columns: initial;
+        max-width: 100%;
+        padding: 0 1rem;
     }
     .qualification__data {
         gap: 0.5rem;
     }
   }
   @media screen and (max-width: 350px){
+    .qualification__container {
+        padding: 0 0.5rem;
+    }
 
+    .qualification__data {
+        column-gap: 0.75rem;
+    }
   }
   .qualification.section {
     opacity: 0;

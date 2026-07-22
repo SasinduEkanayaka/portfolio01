@@ -28,6 +28,7 @@
     display: grid;
     align-items: flex-start;
     row-gap: 1rem;
+    min-width: 0;
 }
 
 .skills__data {
@@ -75,13 +76,32 @@
     }
 
     .skills__content {
-        padding: 1.5rem;
+        padding: 1.5rem 1rem;
     }
-    
-  }
-  @media screen and (max-width: 350px){
+
     .skills__box {
         column-gap: 1.25rem;
+    }
+
+    .skills__level {
+        width: 80px;
+    }
+
+    .skills__name {
+        font-size: var(--small-font-size);
+    }
+  }
+  @media screen and (max-width: 350px){
+    .skills__content {
+        padding: 1.25rem 0.75rem;
+    }
+
+    .skills__box {
+        column-gap: 0.75rem;
+    }
+
+    .skills__level {
+        width: 65px;
     }
 
     .skills__name {

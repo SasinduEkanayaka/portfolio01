@@ -22,9 +22,41 @@
     gap: 2rem;
   }
   
-  @media screen and (max-width: 480px){
-    .f-content{
-      transform: scale(.5);
+  /* Simple flat footer for mobile - no wave background image */
+  @media screen and (max-width: 768px){
+    .footer {
+      display: block;
+      margin: 3rem 0 0 0;
+      padding: 2.5rem 1.5rem;
+      background-color: var(--container-color);
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 1rem 1rem 0 0;
+    }
+
+    .footer img {
+      display: none;
+    }
+
+    .f-content {
+      position: static;
+      width: 100%;
+      margin-top: 0;
+      gap: 1.5rem;
+      transform: none;
+    }
+
+    .f-content span {
+      font-size: var(--small-font-size);
+      text-align: center;
+      word-break: break-all;
+    }
+
+    .f-icons {
+      gap: 2rem;
+    }
+
+    .f-icons svg {
+      width: 1.75rem !important;
+      height: 1.75rem !important;
     }
   }
-  
