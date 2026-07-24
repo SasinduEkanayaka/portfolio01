@@ -14,6 +14,11 @@ import eleven from "../assets/11.png";
 import twelve from "../assets/12.png";
 import fifteen from "../assets/15.png";
 import eighteen from "../assets/18.png";
+import lablanka from "../assets/new (1).png";
+import skyhotel from "../assets/new (3).png";
+import budgetsafari from "../assets/new (4).png";
+import evergreensinharaja from "../assets/new (5).png";
+import fastx from "../assets/new (6).png";
 import "./portfolio.css"
 
 const ProjectCard = ({ image, title, description, link, alt, category }) => {
@@ -203,6 +208,46 @@ function Works() {
         link: "https://happinessvillayala.lk/",
         alt: "tourism website",
         category: "fullstack"
+      },
+      {
+        image: lablanka,
+        title: "Lab Lanka",
+        description: "A modern portfolio website for a laboratory equipment supplier in Sri Lanka, built with Next.js.",
+        link: "https://www.lablanka.lk/",
+        alt: "laboratory equipment website",
+        category: "fullstack"
+      },
+      {
+        image: skyhotel,
+        title: "Sky Hotel Nuwara Eliya",
+        description: "A responsive hotel website with an online booking system, built with PHP, CSS, and JavaScript.",
+        link: "https://skyhotelnuwaraeliya.lk/",
+        alt: "hotel website",
+        category: "fullstack"
+      },
+      {
+        image: budgetsafari,
+        title: "Budget Safari",
+        description: "A tourism landing page for Sri Lanka's most affordable wildlife safari experience, built with PHP, CSS, and JavaScript.",
+        link: "https://bugetsafari.com/",
+        alt: "tourism landing site",
+        category: "fullstack"
+      },
+      {
+        image: evergreensinharaja,
+        title: "Evergreen Sinharaja",
+        description: "A tourism website showcasing a rainforest retreat in Sri Lanka, built with the MERN stack.",
+        link: "https://www.evergreensinharaja.com/",
+        alt: "tourism website",
+        category: "fullstack"
+      },
+      {
+        image: fastx,
+        title: "FastX",
+        description: "An e-commerce website for tech and computer hardware in Sri Lanka, built with the MERN stack.",
+        link: "https://fastx.lk/",
+        alt: "e-commerce website",
+        category: "fullstack"
       }
     ],
     frontend: [
@@ -212,6 +257,22 @@ function Works() {
         description: "A clean, responsive tourism website built with WordPress to showcase Sri Lanka tours.",
         link: "",
         alt: "Service Center",
+        category: "frontend"
+      },
+      {
+        image: lablanka,
+        title: "Lab Lanka",
+        description: "A modern portfolio website for a laboratory equipment supplier in Sri Lanka, built with Next.js.",
+        link: "https://www.lablanka.lk/",
+        alt: "laboratory equipment website",
+        category: "frontend"
+      },
+      {
+        image: budgetsafari,
+        title: "Budget Safari",
+        description: "A tourism landing page for Sri Lanka's most affordable wildlife safari experience, built with PHP, CSS, and JavaScript.",
+        link: "https://bugetsafari.com/",
+        alt: "tourism landing site",
         category: "frontend"
       }
     ]
@@ -377,7 +438,16 @@ function Works() {
         </div>
       </div>
 
-      <Swiper
+      <div className="portfolio-slider-wrapper">
+        <button
+          className="nav-arrow-side nav-arrow-side--left"
+          onClick={goPrev}
+          aria-label="Previous project"
+        >
+          <ChevronLeft />
+        </button>
+
+        <Swiper
         modules={[Navigation]}
         spaceBetween={60}
         slidesPerView={3}
@@ -426,7 +496,16 @@ function Works() {
             </div>
           </SwiperSlide>
         )}
-      </Swiper>
+        </Swiper>
+
+        <button
+          className="nav-arrow-side nav-arrow-side--right"
+          onClick={goNext}
+          aria-label="Next project"
+        >
+          <ChevronRight />
+        </button>
+      </div>
 
       {/* Navigation */}
       <div className={`portfolio-nav-bar ${isVisible ? 'controls-animate-in' : ''}`}>

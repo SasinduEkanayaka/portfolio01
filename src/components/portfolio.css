@@ -455,6 +455,69 @@ body {
   transform: scale(1.2);
 }
 
+/* Side Navigation Arrows - positioned at the edges of the slider */
+.portfolio-slider-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-arrow-side {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #64748b;
+  z-index: 30;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.nav-arrow-side--left {
+  left: 0.5rem;
+}
+
+.nav-arrow-side--right {
+  right: 0.5rem;
+}
+
+.nav-arrow-side:hover {
+  background: #7c3aed;
+  border-color: #7c3aed;
+  color: white;
+  transform: translateY(-50%) scale(1.08);
+  box-shadow: 0 8px 24px rgba(124, 58, 237, 0.35);
+}
+
+.nav-arrow-side:active {
+  transform: translateY(-50%) scale(0.96);
+}
+
+@media (max-width: 768px) {
+  .nav-arrow-side {
+    width: 40px;
+    height: 40px;
+  }
+
+  .nav-arrow-side--left {
+    left: 0;
+  }
+
+  .nav-arrow-side--right {
+    right: 0;
+  }
+}
+
 /* Portfolio Navigation Bar - drag/swipe carousel controls */
 .portfolio-nav-bar {
   display: flex;
